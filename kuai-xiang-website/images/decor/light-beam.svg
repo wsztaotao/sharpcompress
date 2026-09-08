@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 320" fill="none">
   <defs>
     <linearGradient id="beam" x1="0.5" y1="0" x2="0.5" y2="1">
-      <stop offset="0%" stop-color="#FF3D1F" stop-opacity="0"/>
-      <stop offset="35%" stop-color="#FF3D1F" stop-opacity="0.55"/>
-      <stop offset="70%" stop-color="#0A7CFF" stop-opacity="0.45"/>
-      <stop offset="100%" stop-color="#0A7CFF" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#0088FF" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#0088FF" stop-opacity="0.55"/>
+      <stop offset="70%" stop-color="#00D4FF" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/>
     </linearGradient>
   </defs>
   <rect x="108" y="0" width="24" height="320" fill="url(#beam)"/>
-  <rect x="70" y="40" width="8" height="240" fill="#FF3D1F" fill-opacity="0.2"/>
-  <rect x="162" y="60" width="6" height="200" fill="#0A7CFF" fill-opacity="0.25"/>
-  <circle cx="120" cy="80" r="10" fill="#FF3D1F" fill-opacity="0.8"/>
-  <circle cx="120" cy="160" r="7" fill="#0A7CFF" fill-opacity="0.8"/>
-  <circle cx="120" cy="230" r="5" fill="#00C2D8"/>
+  <rect x="70" y="40" width="8" height="240" fill="#0088FF" fill-opacity="0.2"/>
+  <rect x="162" y="60" width="6" height="200" fill="#00D4FF" fill-opacity="0.25"/>
+  <circle cx="120" cy="80" r="10" fill="#0088FF" fill-opacity="0.8"/>
+  <circle cx="120" cy="160" r="7" fill="#00D4FF" fill-opacity="0.8"/>
+  <circle cx="120" cy="230" r="5" fill="#00D4FF"/>
 </svg>

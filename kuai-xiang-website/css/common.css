@@ -1,31 +1,39 @@
 /* =========================================================
-   软件快响 · 共享样式（红山开源页头 / 页尾 / 基础变量）
-   明亮、理性、突出「快」——热橙加速感 + 科技蓝冷静感
+   软件快响 · 共享样式（红山开源页头 / 页尾）
+   统一明亮蓝色系 · 版心加宽 · 突出快响与先进技术
    ========================================================= */
 
 :root {
-  --speed: #ff3d1f;
-  --speed-deep: #e02a10;
-  --speed-soft: #ff6a3d;
-  --speed-glow: rgba(255, 61, 31, 0.18);
-  --tech: #0a7cff;
-  --tech-deep: #005fd1;
-  --tech-soft: #3da2ff;
-  --cyan: #00c2d8;
-  --ink: #0f1c2e;
-  --ink-2: #243447;
-  --muted: #5c6b7a;
-  --line: #d7e0ea;
-  --bg: #f5f8fc;
+  --blue: #0088ff;
+  --blue-deep: #0057d9;
+  --blue-soft: #3dadff;
+  --blue-glow: rgba(0, 136, 255, 0.22);
+  --cyan: #00d4ff;
+  --cyan-deep: #00a8d6;
+  --navy: #071a33;
+  --ink: #0c1b2e;
+  --ink-2: #1e3348;
+  --muted: #5a6d80;
+  --line: #d4e2f0;
+  --bg: #f3f7fc;
   --surface: #ffffff;
-  --footer-bg: #0b1a33;
-  --shadow-sm: 0 6px 18px rgba(15, 28, 46, 0.06);
-  --shadow-md: 0 16px 40px rgba(15, 28, 46, 0.1);
-  --radius: 14px;
+  --footer-bg: #071a33;
+  --shadow-sm: 0 8px 22px rgba(7, 26, 51, 0.06);
+  --shadow-md: 0 18px 44px rgba(7, 26, 51, 0.1);
+  --radius: 16px;
   --header-h: 72px;
-  --container: 1180px;
+  --container: 1280px;
   --font-display: "DIN Alternate", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
   --font-body: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+
+  /* aliases used by pages */
+  --speed: var(--blue);
+  --speed-deep: var(--blue-deep);
+  --speed-soft: var(--blue-soft);
+  --speed-glow: var(--blue-glow);
+  --tech: var(--blue);
+  --tech-deep: var(--blue-deep);
+  --tech-soft: var(--blue-soft);
 }
 
 *,
@@ -106,9 +114,9 @@ p {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  min-height: 46px;
-  padding: 0 22px;
-  border-radius: 8px;
+  min-height: 48px;
+  padding: 0 24px;
+  border-radius: 10px;
   font-weight: 600;
   letter-spacing: 0.02em;
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
@@ -120,23 +128,23 @@ p {
 
 .btn-primary {
   color: #fff;
-  background: linear-gradient(135deg, var(--speed) 0%, var(--speed-soft) 60%, #ff9a4d 100%);
-  box-shadow: 0 10px 24px var(--speed-glow);
+  background: linear-gradient(135deg, var(--blue-deep) 0%, var(--blue) 45%, var(--cyan) 100%);
+  box-shadow: 0 12px 28px var(--blue-glow);
 }
 
 .btn-primary:hover {
-  box-shadow: 0 14px 28px rgba(255, 61, 31, 0.28);
+  box-shadow: 0 16px 34px rgba(0, 136, 255, 0.35);
 }
 
 .btn-secondary {
-  color: var(--ink);
+  color: var(--blue-deep);
   background: #fff;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(0, 136, 255, 0.28);
 }
 
 .btn-secondary:hover {
-  border-color: var(--speed);
-  color: var(--speed-deep);
+  background: #f0f7ff;
+  border-color: var(--blue);
 }
 
 .btn-ghost {
@@ -149,25 +157,19 @@ p {
   background: rgba(255, 255, 255, 0.2);
 }
 
-.btn-tech {
-  color: #fff;
-  background: linear-gradient(135deg, var(--tech) 0%, var(--tech-soft) 100%);
-  box-shadow: 0 10px 24px rgba(10, 124, 255, 0.22);
-}
-
-/* ---------- Shared Header (红山开源) ---------- */
+/* ---------- Shared Header ---------- */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 1000;
   height: var(--header-h);
   background: rgba(255, 255, 255, 0.96);
-  border-bottom: 1px solid rgba(215, 224, 234, 0.95);
+  border-bottom: 1px solid rgba(212, 226, 240, 0.95);
   backdrop-filter: blur(12px);
 }
 
 .site-header.is-scrolled {
-  box-shadow: 0 8px 24px rgba(15, 28, 46, 0.06);
+  box-shadow: 0 8px 24px rgba(7, 26, 51, 0.06);
 }
 
 .header-inner {
@@ -229,8 +231,8 @@ p {
 
 .nav a:hover,
 .nav a.is-active {
-  color: var(--tech);
-  background: rgba(10, 124, 255, 0.08);
+  color: var(--blue-deep);
+  background: rgba(0, 136, 255, 0.08);
 }
 
 .header-search {
@@ -264,7 +266,7 @@ p {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  color: var(--tech);
+  color: var(--blue);
 }
 
 .header-search button svg {
@@ -330,7 +332,7 @@ p {
 
 .footer-desc {
   margin-top: 14px;
-  max-width: 280px;
+  max-width: 300px;
   font-size: 13px;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.55);
@@ -351,7 +353,7 @@ p {
 }
 
 .footer-col a:hover {
-  color: var(--speed-soft);
+  color: var(--cyan);
 }
 
 .footer-qr {
@@ -391,7 +393,7 @@ p {
 /* ---------- Shared content utilities ---------- */
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(28px, 3.2vw, 40px);
+  font-size: clamp(28px, 3.2vw, 42px);
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--ink);
@@ -399,7 +401,7 @@ p {
 
 .section-lead {
   margin-top: 12px;
-  max-width: 560px;
+  max-width: 620px;
   color: var(--muted);
   font-size: 16px;
 }
@@ -413,14 +415,14 @@ p {
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--speed-deep);
+  color: var(--blue-deep);
 }
 
 .eyebrow::before {
   content: "";
   width: 18px;
   height: 2px;
-  background: var(--speed);
+  background: linear-gradient(90deg, var(--blue), var(--cyan));
 }
 
 .reveal {
@@ -434,20 +436,6 @@ p {
   transform: none;
 }
 
-.icon-box {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  background: rgba(255, 61, 31, 0.08);
-}
-
-.icon-box img {
-  width: 28px;
-  height: 28px;
-}
-
 .status-dot {
   display: inline-block;
   width: 8px;
@@ -455,31 +443,17 @@ p {
   border-radius: 50%;
   margin-right: 6px;
   vertical-align: middle;
+  background: var(--blue);
 }
 
-.status-dot.collect {
-  background: var(--speed);
-}
-.status-dot.select {
-  background: var(--tech);
-}
-.status-dot.sign {
-  background: #f5a524;
-}
-.status-dot.done {
-  background: #0ea36b;
-}
-
-@keyframes brand-shine {
-  0%,
-  55% {
-    transform: translateX(-120%);
-  }
-  80%,
-  100% {
-    transform: translateX(120%);
-  }
-}
+.status-dot.s1 { background: #0088ff; }
+.status-dot.s2 { background: #00a8ff; }
+.status-dot.s3 { background: #00c2ff; }
+.status-dot.s4 { background: #3dadff; }
+.status-dot.s5 { background: #5b8def; }
+.status-dot.s6 { background: #00d4ff; }
+.status-dot.s7 { background: #8aa0b8; }
+.status-dot.s8 { background: #00b894; }
 
 @keyframes speed-sweep {
   to {
@@ -505,12 +479,6 @@ p {
   100% {
     transform: scale(1.5);
     opacity: 0;
-  }
-}
-
-@keyframes dash-move {
-  to {
-    stroke-dashoffset: -48;
   }
 }
 
@@ -554,6 +522,64 @@ p {
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes flow-dash {
+  to {
+    stroke-dashoffset: -120;
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes wave-x {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 136, 255, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(0, 136, 255, 0);
+  }
+}
+
+@keyframes progress-fill {
+  from {
+    width: 0;
   }
 }
 
@@ -622,9 +648,5 @@ p {
 
   .footer-bottom {
     flex-direction: column;
-  }
-
-  .footer-qr {
-    justify-content: flex-start;
   }
 }

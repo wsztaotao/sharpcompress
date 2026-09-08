@@ -1,48 +1,37 @@
-# 软件快响 · 三套首页选型包
+# 软件快响 · 三套蓝色首页（修订版）
 
-面向领导选型的静态首页方案。三套页面共用同一套 `css/`、`js/`、`images/`，保留统一的红山开源页头与页尾，中间内容版式完全不同。
+统一蓝色系、版心加宽至 **1280px**，保留红山开源页头页尾；中间内容全部重做，避免与红山开源子站展示方式相似。
 
-## 打开方式
+## 下载
 
-用浏览器直接打开任意文件即可（无需构建）：
+仓库根目录：[`kuai-xiang-homes.zip`](../kuai-xiang-homes.zip)
 
-| 文件 | 方案 | 气质 |
-|------|------|------|
-| `index-a.html` | 冲刺轨道 | 斜切速度感、跑道任务条、光扫描动效 |
-| `index-b.html` | 脉冲指挥 | 雷达脉冲、Bento 能力拼版、列表指挥台 |
-| `index-c.html` | 光速瀑布 | 杂志大字报、光束叙事、通栏任务条目 |
+GitHub 直链（分支）：
 
-也可在本目录启动本地服务：
+https://github.com/wsztaotao/sharpcompress/raw/cursor/kuai-xiang-home-f6e5/kuai-xiang-homes.zip
+
+## 三套模版
+
+| 文件 | 名称 | 差异点 |
+|------|------|--------|
+| `index-a.html` | 冲刺轨道 | 环形星座指标、八步流水线点亮、成果动能舱 |
+| `index-b.html` | 蓝焰航道 | 纵向动能列、蛇形八步、晶体成果矩阵 |
+| `index-c.html` | 极速棱镜 | 蜂窝指标、纵向八站轨道、层叠成果棱片 |
+
+## 共同要求落实
+
+1. **蓝色系**：主色 `#0088FF` / 深蓝 `#0057D9` / 电青 `#00D4FF`
+2. **数据区**：不再使用红山式灰底五列横条
+3. **流程**：完整 8 步（征集→遴选→公示→协议→监管→结算→关闭→完成），CSS/JS 动态点亮
+4. **成果区**：扫描舱 / 晶体矩阵 / 层叠棱片，非双栏归档门户样式
+5. **版心**：`--container: 1280px`（较原 1180 加宽约 100px）
+6. 移动端自适应；共用 `css/` `js/` `images/`
+
+## 本地预览
 
 ```bash
+cd kuai-xiang-website
 python3 -m http.server 8080
 ```
 
-然后访问 `http://localhost:8080/index-a.html`（或 b / c）。
-
-## 目录结构
-
-```
-kuai-xiang-website/
-  index-a.html
-  index-b.html
-  index-c.html
-  css/common.css          # 页头页尾与基础变量
-  css/home-a.css          # 方案 A
-  css/home-b.css          # 方案 B
-  css/home-c.css          # 方案 C
-  js/common.js
-  js/home.js
-  images/logo-osredm.svg
-  images/qr-placeholder.svg
-  images/icons/           # 全新图标（非红山旧图标）
-  images/decor/           # 动态装饰图
-```
-
-## 设计要点
-
-- 主色突出「快」：热橙红 `#FF3D1F` + 明亮科技蓝 `#0A7CFF`
-- 内容信息与旧版接近：定位、数据、流程、任务、成果、专家审阅
-- 版式刻意避开旧蓝白任务卡片门户布局
-- 含 CSS 动效：速度线、脉冲环、光扫、数字滚动、滚动显现、跑马灯等
-- 已做移动端自适应（折叠导航、栅格降级）
+浏览器打开 `http://localhost:8080/index-a.html`（或 b / c）。

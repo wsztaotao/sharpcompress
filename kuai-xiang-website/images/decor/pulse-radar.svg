@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280" fill="none">
-  <circle cx="140" cy="140" r="120" stroke="#0A7CFF" stroke-opacity="0.15" stroke-width="1.5"/>
-  <circle cx="140" cy="140" r="88" stroke="#FF3D1F" stroke-opacity="0.2" stroke-width="1.5"/>
-  <circle cx="140" cy="140" r="56" stroke="#0A7CFF" stroke-opacity="0.35" stroke-width="2"/>
-  <circle cx="140" cy="140" r="18" fill="#FF3D1F"/>
-  <path d="M140 140 L210 80" stroke="#FF3D1F" stroke-width="3" stroke-linecap="round"/>
-  <circle cx="210" cy="80" r="6" fill="#0A7CFF"/>
-  <path d="M140 20 A120 120 0 0 1 248 100" stroke="#00C2D8" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 10"/>
+  <circle cx="140" cy="140" r="120" stroke="#00D4FF" stroke-opacity="0.15" stroke-width="1.5"/>
+  <circle cx="140" cy="140" r="88" stroke="#0088FF" stroke-opacity="0.2" stroke-width="1.5"/>
+  <circle cx="140" cy="140" r="56" stroke="#00D4FF" stroke-opacity="0.35" stroke-width="2"/>
+  <circle cx="140" cy="140" r="18" fill="#0088FF"/>
+  <path d="M140 140 L210 80" stroke="#0088FF" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="210" cy="80" r="6" fill="#00D4FF"/>
+  <path d="M140 20 A120 120 0 0 1 248 100" stroke="#00D4FF" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 10"/>
 </svg>

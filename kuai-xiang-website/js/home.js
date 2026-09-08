@@ -1,8 +1,7 @@
-/* 页面级动效：速度线、脉冲、跑马灯 */
+/* 页面级动效增强 */
 (function () {
   "use strict";
 
-  /* Parallax light streaks on mouse move (desktop) */
   var stage = document.querySelector("[data-parallax]");
   if (stage && window.matchMedia("(pointer:fine)").matches) {
     stage.addEventListener("mousemove", function (e) {
@@ -14,13 +13,11 @@
     });
   }
 
-  /* Marquee duplication for seamless loop */
   document.querySelectorAll("[data-marquee]").forEach(function (track) {
     var content = track.innerHTML;
     track.innerHTML = content + content;
   });
 
-  /* Task filter chips (demo) */
   document.querySelectorAll("[data-filter-group]").forEach(function (group) {
     var chips = group.querySelectorAll("[data-filter]");
     var items = document.querySelectorAll(group.getAttribute("data-filter-group"));
@@ -39,9 +36,7 @@
     });
   });
 
-  /* Live pulse clock */
-  var live = document.querySelector("[data-live-clock]");
-  if (live) {
+  document.querySelectorAll("[data-live-clock]").forEach(function (live) {
     function tick() {
       var now = new Date();
       var h = String(now.getHours()).padStart(2, "0");
@@ -51,5 +46,46 @@
     }
     tick();
     setInterval(tick, 1000);
-  }
+  });
+
+  /* 8-step flow: sequential highlight */
+  document.querySelectorAll("[data-flow-steps]").forEach(function (flow) {
+    var steps = flow.querySelectorAll("[data-step]");
+    if (!steps.length) return;
+    var i = 0;
+    function activate() {
+      steps.forEach(function (s, idx) {
+        s.classList.toggle("is-on", idx === i);
+        s.classList.toggle("is-done", idx < i);
+      });
+      i = (i + 1) % steps.length;
+    }
+    activate();
+    setInterval(activate, 1600);
+  });
+
+  /* Progress bars in outcome panels */
+  document.querySelectorAll("[data-progress]").forEach(function (bar) {
+    var target = Number(bar.getAttribute("data-progress") || 0);
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          bar.style.width = target + "%";
+          io.unobserve(bar);
+        });
+      }, { threshold: 0.3 });
+      io.observe(bar);
+    } else {
+      bar.style.width = target + "%";
+    }
+  });
+
+  /* Stagger children when parent becomes visible */
+  document.querySelectorAll("[data-stagger]").forEach(function (parent) {
+    var kids = parent.children;
+    Array.prototype.forEach.call(kids, function (kid, idx) {
+      kid.style.transitionDelay = idx * 0.08 + "s";
+    });
+  });
 })();
