@@ -57,13 +57,13 @@
   min-height: 380px;
   display: grid;
   place-items: center;
+  transform: translate3d(var(--px, 0), var(--py, 0), 0);
 }
 
-.c-prism .fx3d-hero {
-  position: absolute;
-  inset: 0;
-  border-radius: 24px;
-  overflow: hidden;
+.c-prism img {
+  width: min(100%, 260px);
+  animation: float-y 4.6s ease-in-out infinite;
+  filter: drop-shadow(0 24px 40px rgba(0, 136, 255, 0.25));
 }
 
 .c-prism__pane {

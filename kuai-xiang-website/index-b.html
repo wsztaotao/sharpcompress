@@ -46,10 +46,9 @@
             <a class="btn btn-secondary" href="#snake">浏览八步路径</a>
           </div>
         </div>
-        <div class="b-hero__flame reveal">
-          <div class="fx3d fx3d-hero" data-fx3d="hero-field" aria-hidden="true">
-            <canvas class="fx3d-canvas"></canvas>
-          </div>
+        <div class="b-hero__flame reveal" data-parallax>
+          <div class="b-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <img src="images/decor/pulse-radar.svg" alt="蓝焰脉冲示意" />
         </div>
       </div>
     </section>
@@ -57,20 +56,22 @@
     <section class="b-cols">
       <div class="container">
         <div class="fx3d fx3d-metrics fx3d--light" data-fx3d="metrics-columns">
-          <canvas class="fx3d-canvas"></canvas>
           <div class="fx3d-head">
             <h2>平台动能实时跃迁</h2>
-            <p>三维能量柱阵列 · 数字在 DOM 卡片中，接口只改文案即可</p>
+            <p>Three.js 立体能量柱阵列 · 高度脉动</p>
           </div>
-          <div class="fx3d-overlays">
-            <div class="fx3d-card" data-metric="tasks"><strong data-count="621">0</strong><span>创客任务</span></div>
-            <div class="fx3d-card" data-metric="makers"><strong data-count="1035">0</strong><span>参与创客</span></div>
-            <div class="fx3d-card" data-metric="prize"><strong data-count="8759.1" data-decimals="1" data-suffix="w">0</strong><span>任务总奖金</span></div>
-            <div class="fx3d-card" data-metric="paid"><strong data-count="5439.4" data-decimals="1" data-suffix="w">0</strong><span>累计已支付</span></div>
-            <div class="fx3d-card" data-metric="fields"><strong data-count="24" data-suffix="+">0</strong><span>协同领域</span></div>
+          <div class="fx3d-stage">
+            <canvas class="fx3d-canvas"></canvas>
+          </div>
 
+          <div class="fx3d-data">
+            <div class="fx3d-datum" data-metric="tasks"><strong data-count="621">0</strong><span>创客任务</span></div>
+            <div class="fx3d-datum" data-metric="makers"><strong data-count="1035">0</strong><span>参与创客</span></div>
+            <div class="fx3d-datum" data-metric="prize"><strong data-count="8759.1" data-decimals="1" data-suffix="w">0</strong><span>任务总奖金</span></div>
+            <div class="fx3d-datum" data-metric="paid"><strong data-count="5439.4" data-decimals="1" data-suffix="w">0</strong><span>累计已支付</span></div>
+            <div class="fx3d-datum" data-metric="fields"><strong data-count="24" data-suffix="+">0</strong><span>协同领域</span></div>
           </div>
-          <p class="fx3d-note">KuaiXiang3D.updateMetric('tasks', 700)</p>
+          <p class="fx3d-note">立体场景由 Three.js 驱动 · 数字在下方数据条，接口可直接调用 KuaiXiang3D.updateMetrics(...)</p>
         </div>
       </div>
     </section>
@@ -80,22 +81,23 @@
         <div class="reveal">
           <p class="eyebrow">SERPENTINE FLOW</p>
           <h2 class="section-title">八步蛇形加速路径</h2>
-          <p class="section-lead">三维蛇形路径串联八步闭环，节点依次点亮；文案层可独立对接业务接口。</p>
+          <p class="section-lead">立体蛇形管线串联八步闭环；阶段卡片在场景下方同步高亮，便于接口对接。</p>
         </div>
         <div class="fx3d fx3d-flow" data-fx3d="flow-serpentine">
-          <canvas class="fx3d-canvas"></canvas>
-          <div class="fx3d-overlays">
-            <article class="fx3d-step" data-step><div class="fx3d-step__n">01</div><h3>成果征集中</h3><p>开放任务，汇聚创客方案。</p></article>
-            <article class="fx3d-step" data-step><div class="fx3d-step__n">02</div><h3>成果遴选中</h3><p>专家审阅优选先进技术。</p></article>
-            <article class="fx3d-step" data-step><div class="fx3d-step__n">03</div><h3>成果公示中</h3><p>结果透明公示，接受监督。</p></article>
-            <article class="fx3d-step" data-step><div class="fx3d-step__n">04</div><h3>协议签订中</h3><p>明确权责，快速完成签约。</p></article>
-            <article class="fx3d-step" data-step><div class="fx3d-step__n">05</div><h3>研发监管中</h3><p>过程可视，保障交付质量。</p></article>
-            <article class="fx3d-step" data-step><div class="fx3d-step__n">06</div><h3>成果结算中</h3><p>奖金结算，兑现激励闭环。</p></article>
-            <article class="fx3d-step" data-step><div class="fx3d-step__n">07</div><h3>已关闭</h3><p>流程终止，信息完整归档。</p></article>
-            <article class="fx3d-step" data-step><div class="fx3d-step__n">08</div><h3>已完成</h3><p>成果沉淀，支撑下一次快响。</p></article>
-
+          <div class="fx3d-stage">
+            <canvas class="fx3d-canvas"></canvas>
           </div>
-          <p class="fx3d-note">三维蛇形管线巡航 · KuaiXiang3D.setFlowStep(n)</p>
+          <div class="fx3d-steps">
+            <article class="fx3d-step" data-step><div class="fx3d-step__n">01</div><h3>成果征集中</h3><p>开放任务，汇聚方案与成果提交。</p></article>
+            <article class="fx3d-step" data-step><div class="fx3d-step__n">02</div><h3>成果遴选中</h3><p>专家审阅，优选先进技术成果。</p></article>
+            <article class="fx3d-step" data-step><div class="fx3d-step__n">03</div><h3>成果公示中</h3><p>结果公开透明，接受社区监督。</p></article>
+            <article class="fx3d-step" data-step><div class="fx3d-step__n">04</div><h3>协议签订中</h3><p>明确交付边界与权责，快速签约。</p></article>
+            <article class="fx3d-step" data-step><div class="fx3d-step__n">05</div><h3>研发监管中</h3><p>过程可视可控，保障质量与进度。</p></article>
+            <article class="fx3d-step" data-step><div class="fx3d-step__n">06</div><h3>成果结算中</h3><p>奖金结算支付，兑现激励闭环。</p></article>
+            <article class="fx3d-step" data-step><div class="fx3d-step__n">07</div><h3>已关闭</h3><p>流程终止归档，信息可追溯。</p></article>
+            <article class="fx3d-step" data-step><div class="fx3d-step__n">08</div><h3>已完成</h3><p>成果沉淀复用，支撑下一次快响。</p></article>
+          </div>
+          <p class="fx3d-note">Three.js 蛇形管线立体巡航 · KuaiXiang3D.setFlowStep(n)</p>
         </div>
     </section>
 

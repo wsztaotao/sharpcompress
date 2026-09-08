@@ -93,20 +93,17 @@
 
 .a-hero__visual {
   position: relative;
-  min-height: 360px;
+  min-height: 320px;
   display: grid;
   place-items: center;
   transform: translate3d(var(--px, 0), var(--py, 0), 0);
   transition: transform 0.15s ease-out;
 }
 
-.a-hero__visual .fx3d-hero {
-  position: absolute;
-  inset: 0;
-  border-radius: 24px;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at 50% 50%, rgba(0, 136, 255, 0.18), transparent 60%);
+.a-hero__visual img {
+  width: min(100%, 380px);
+  animation: float-y 4.5s ease-in-out infinite;
+  filter: drop-shadow(0 22px 40px rgba(0, 136, 255, 0.22));
 }
 
 .a-hero__badge {
@@ -237,9 +234,12 @@
   z-index: 1;
 }
 
-/* ===== 8步流程：动态流水线 ===== */
 .a-flow {
   padding: 88px 0 60px;
+}
+
+.a-flow .fx3d-flow {
+  margin-top: 28px;
 }
 
 .a-flow__board {

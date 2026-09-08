@@ -49,9 +49,7 @@
           </div>
         </div>
         <div class="a-hero__visual reveal">
-          <div class="fx3d fx3d-hero" data-fx3d="hero-field" aria-hidden="true">
-            <canvas class="fx3d-canvas"></canvas>
-          </div>
+          <img src="images/decor/speed-chart.svg" alt="快速响应动态示意" />
           <div class="a-hero__badge"><strong>快响</strong>响应 · 竞逐 · 交付</div>
         </div>
       </div>
@@ -60,19 +58,22 @@
     <section class="a-orbit">
       <div class="container">
         <div class="fx3d fx3d-metrics" data-fx3d="metrics-orbit">
-          <canvas class="fx3d-canvas"></canvas>
           <div class="fx3d-head">
             <h2>平台动能实时跃迁</h2>
-            <p>三维轨道平台承载指标 · DOM 数字可直接对接接口</p>
+            <p>Three.js 立体轨道平台 · 实时旋转跃迁</p>
           </div>
-          <div class="fx3d-overlays">
-            <div class="fx3d-card" data-metric="tasks"><strong data-count="621">0</strong><span>创客任务</span></div>
-            <div class="fx3d-card" data-metric="makers"><strong data-count="1035">0</strong><span>参与创客</span></div>
-            <div class="fx3d-card" data-metric="prize"><strong data-count="8759.1" data-decimals="1" data-suffix="w">0</strong><span>任务总奖金</span></div>
-            <div class="fx3d-card" data-metric="paid"><strong data-count="5439.4" data-decimals="1" data-suffix="w">0</strong><span>累计已支付</span></div>
-            <div class="fx3d-card" data-metric="fields"><strong data-count="24" data-suffix="+">0</strong><span>协同领域</span></div>
+          <div class="fx3d-stage">
+            <canvas class="fx3d-canvas"></canvas>
           </div>
-          <p class="fx3d-note">接口示例：KuaiXiang3D.updateMetrics({ tasks: 700, makers: 1100 })</p>
+
+          <div class="fx3d-data">
+            <div class="fx3d-datum" data-metric="tasks"><strong data-count="621">0</strong><span>创客任务</span></div>
+            <div class="fx3d-datum" data-metric="makers"><strong data-count="1035">0</strong><span>参与创客</span></div>
+            <div class="fx3d-datum" data-metric="prize"><strong data-count="8759.1" data-decimals="1" data-suffix="w">0</strong><span>任务总奖金</span></div>
+            <div class="fx3d-datum" data-metric="paid"><strong data-count="5439.4" data-decimals="1" data-suffix="w">0</strong><span>累计已支付</span></div>
+            <div class="fx3d-datum" data-metric="fields"><strong data-count="24" data-suffix="+">0</strong><span>协同领域</span></div>
+          </div>
+          <p class="fx3d-note">立体场景由 Three.js 驱动 · 数字在下方数据条，接口可直接调用 KuaiXiang3D.updateMetrics(...)</p>
         </div>
       </div>
     </section>
@@ -82,11 +83,13 @@
         <div class="reveal">
           <p class="eyebrow">EIGHT-BEAT LOOP</p>
           <h2 class="section-title">快响八步闭环</h2>
-          <p class="section-lead">三维能量环串联八个阶段，节点依次点亮；业务数据仍由 DOM 承载，便于接口接入。</p>
+          <p class="section-lead">下方三维能量环实时巡航，八个阶段依次点亮；业务文案在立体场景下方，便于接口接入。</p>
         </div>
         <div class="fx3d fx3d-flow" data-fx3d="flow-ring">
-          <canvas class="fx3d-canvas"></canvas>
-          <div class="fx3d-overlays">
+          <div class="fx3d-stage">
+            <canvas class="fx3d-canvas"></canvas>
+          </div>
+          <div class="fx3d-steps">
             <article class="fx3d-step" data-step><div class="fx3d-step__n">01</div><h3>成果征集中</h3><p>开放任务，汇聚方案与成果提交。</p></article>
             <article class="fx3d-step" data-step><div class="fx3d-step__n">02</div><h3>成果遴选中</h3><p>专家审阅，优选先进技术成果。</p></article>
             <article class="fx3d-step" data-step><div class="fx3d-step__n">03</div><h3>成果公示中</h3><p>结果公开透明，接受社区监督。</p></article>
@@ -96,7 +99,7 @@
             <article class="fx3d-step" data-step><div class="fx3d-step__n">07</div><h3>已关闭</h3><p>流程终止归档，信息可追溯。</p></article>
             <article class="fx3d-step" data-step><div class="fx3d-step__n">08</div><h3>已完成</h3><p>成果沉淀复用，支撑下一次快响。</p></article>
           </div>
-          <p class="fx3d-note">三维能量环自动巡航 · KuaiXiang3D.setFlowStep(n) 可同步业务阶段</p>
+          <p class="fx3d-note">Three.js 能量环巡航 · KuaiXiang3D.setFlowStep(n) 同步业务阶段</p>
         </div>
     </section>
 
