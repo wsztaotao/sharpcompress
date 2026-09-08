@@ -48,8 +48,9 @@
     setInterval(tick, 1000);
   });
 
-  /* 8-step flow: sequential highlight */
+  /* 8-step flow: sequential highlight (skip when Three.js owns the flow) */
   document.querySelectorAll("[data-flow-steps]").forEach(function (flow) {
+    if (flow.closest("[data-fx3d]")) return;
     var steps = flow.querySelectorAll("[data-step]");
     if (!steps.length) return;
     var i = 0;

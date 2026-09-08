@@ -1,31 +1,37 @@
-# 软件快响 · 三套蓝色首页（修订版）
+# 软件快响 · 三套蓝色三维首页
 
-统一蓝色系、版心加宽至 **1280px**，保留红山开源页头页尾；中间内容全部重做，避免与红山开源子站展示方式相似。
+统一蓝色系、版心 **1280px**，页头页尾保留红山开源；动能指标与八步闭环采用 **Three.js** 三维动效，数值仍在 DOM，便于接口接入。
 
 ## 下载
-
-仓库根目录：[`kuai-xiang-homes.zip`](../kuai-xiang-homes.zip)
-
-GitHub 直链（分支）：
 
 https://github.com/wsztaotao/sharpcompress/raw/cursor/kuai-xiang-home-f6e5/kuai-xiang-homes.zip
 
 ## 三套模版
 
-| 文件 | 名称 | 差异点 |
-|------|------|--------|
-| `index-a.html` | 冲刺轨道 | 环形星座指标、八步流水线点亮、成果动能舱 |
-| `index-b.html` | 蓝焰航道 | 纵向动能列、蛇形八步、晶体成果矩阵 |
-| `index-c.html` | 极速棱镜 | 蜂窝指标、纵向八站轨道、层叠成果棱片 |
+| 文件 | 名称 | 三维差异 |
+|------|------|----------|
+| `index-a.html` | 冲刺轨道 | 轨道平台指标 + 能量环八步 |
+| `index-b.html` | 蓝焰航道 | 能量柱阵列 + 蛇形管线八步 |
+| `index-c.html` | 极速棱镜 | 蜂巢棱柱 + 纵向轨道八步 |
 
-## 共同要求落实
+## 数据接口（低复杂度）
 
-1. **蓝色系**：主色 `#0088FF` / 深蓝 `#0057D9` / 电青 `#00D4FF`
-2. **数据区**：不再使用红山式灰底五列横条
-3. **流程**：完整 8 步（征集→遴选→公示→协议→监管→结算→关闭→完成），CSS/JS 动态点亮
-4. **成果区**：扫描舱 / 晶体矩阵 / 层叠棱片，非双栏归档门户样式
-5. **版心**：`--container: 1280px`（较原 1180 加宽约 100px）
-6. 移动端自适应；共用 `css/` `js/` `images/`
+三维只负责空间表现，业务数字在 HTML 卡片中：
+
+```js
+// 单个
+KuaiXiang3D.updateMetric('tasks', 700);
+
+// 批量
+KuaiXiang3D.updateMetrics({
+  tasks: 700,
+  makers: 1200,
+  prize: { value: 9000.5, decimals: 1, suffix: 'w' }
+});
+
+// 同步当前业务阶段 0-7
+KuaiXiang3D.setFlowStep(2);
+```
 
 ## 本地预览
 
@@ -34,4 +40,13 @@ cd kuai-xiang-website
 python3 -m http.server 8080
 ```
 
-浏览器打开 `http://localhost:8080/index-a.html`（或 b / c）。
+需通过本地服务打开（不要直接 `file://`），以便脚本与 WebGL 正常加载。
+
+## 目录
+
+```
+css/ common + home-a/b/c
+js/  common.js, home.js, three-fx.js, vendor/three.min.js
+images/
+index-a.html / index-b.html / index-c.html
+```

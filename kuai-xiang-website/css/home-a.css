@@ -93,17 +93,20 @@
 
 .a-hero__visual {
   position: relative;
-  min-height: 320px;
+  min-height: 360px;
   display: grid;
   place-items: center;
   transform: translate3d(var(--px, 0), var(--py, 0), 0);
   transition: transform 0.15s ease-out;
 }
 
-.a-hero__visual img {
-  width: min(100%, 380px);
-  animation: float-y 4.5s ease-in-out infinite;
-  filter: drop-shadow(0 22px 40px rgba(0, 136, 255, 0.22));
+.a-hero__visual .fx3d-hero {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(0, 136, 255, 0.18), transparent 60%);
 }
 
 .a-hero__badge {
@@ -463,6 +466,10 @@
   gap: 20px;
 }
 
+.a-holo {
+  perspective: 1400px;
+}
+
 .a-holo__panel {
   position: relative;
   border-radius: 22px;
@@ -472,6 +479,16 @@
   color: #fff;
   box-shadow: var(--shadow-md);
   min-height: 320px;
+  transform: rotateY(-4deg) translateZ(0);
+  transition: transform 0.4s ease;
+}
+
+.a-holo__panel:hover {
+  transform: rotateY(0deg) translateY(-4px);
+}
+
+.a-holo__panel--light:hover {
+  transform: rotateY(0deg) translateY(-4px);
 }
 
 .a-holo__panel--light {
