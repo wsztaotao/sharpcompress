@@ -1,0 +1,12 @@
+本 zip 包位置（请切换到分支 cursor/kuai-xiang-home-f6e5，不要看 master）：
+
+1) 仓库根目录文件：
+https://github.com/wsztaotao/sharpcompress/blob/cursor/kuai-xiang-home-f6e5/kuai-xiang-homes.zip
+
+打开后点击右上角 Raw / Download raw file 下载。
+
+2) 直链：
+https://github.com/wsztaotao/sharpcompress/raw/cursor/kuai-xiang-home-f6e5/kuai-xiang-homes.zip
+
+3) 在 Pull Request #1 的 Files changed 里也能看到 kuai-xiang-homes.zip：
+https://github.com/wsztaotao/sharpcompress/pull/1/files

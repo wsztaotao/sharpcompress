@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <rect width="120" height="120" rx="8" fill="#F0F4F8"/>
+  <rect x="12" y="12" width="96" height="96" fill="#fff" stroke="#D0D7DE"/>
+  <g fill="#1A1A1A">
+    <rect x="22" y="22" width="10" height="10"/>
+    <rect x="38" y="22" width="10" height="10"/>
+    <rect x="54" y="22" width="10" height="10"/>
+    <rect x="70" y="22" width="10" height="10"/>
+    <rect x="86" y="22" width="10" height="10"/>
+    <rect x="22" y="38" width="10" height="10"/>
+    <rect x="54" y="38" width="10" height="10"/>
+    <rect x="86" y="38" width="10" height="10"/>
+    <rect x="22" y="54" width="10" height="10"/>
+    <rect x="38" y="54" width="10" height="10"/>
+    <rect x="54" y="54" width="10" height="10"/>
+    <rect x="70" y="54" width="10" height="10"/>
+    <rect x="86" y="54" width="10" height="10"/>
+    <rect x="22" y="70" width="10" height="10"/>
+    <rect x="86" y="70" width="10" height="10"/>
+    <rect x="22" y="86" width="10" height="10"/>
+    <rect x="38" y="86" width="10" height="10"/>
+    <rect x="54" y="86" width="10" height="10"/>
+    <rect x="70" y="86" width="10" height="10"/>
+    <rect x="86" y="86" width="10" height="10"/>
+  </g>
+  <text x="60" y="112" text-anchor="middle" font-size="8" fill="#8A94A6" font-family="sans-serif">QR</text>
+</svg>
